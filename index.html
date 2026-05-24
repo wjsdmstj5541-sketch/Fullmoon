@@ -15,7 +15,21 @@
   <header class="site-header">
     <div class="header-glass">
       <a class="logo" href="#top" aria-label="fullmoon studio 홈">fullmoon</a>
+      <nav class="desktop-nav">
+        <a href="#portfolio">포트폴리오</a>
+        <a href="#packages">패키지 안내</a>
+        <a href="#branches">지점안내</a>
+      </nav>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-button>
+        <span></span>
+        <span></span>
+      </button>
     </div>
+    <nav class="mobile-menu" id="site-menu" data-menu>
+      <a href="#portfolio">포트폴리오</a>
+      <a href="#packages">패키지 안내</a>
+      <a href="#branches">지점안내</a>
+    </nav>
   </header>
 
   <main id="top">
@@ -120,10 +134,9 @@
     </div>
   </footer>
 
-  <nav class="floating-nav">
-    <a href="#portfolio">포트폴리오</a>
-    <a href="#packages">패키지 안내</a>
-    <a href="#branches">지점안내</a>
+  <nav class="floating-cta">
+    <a href="tel:010-2513-5927" class="cta-btn cta-call">전화문의</a>
+    <a href="#branches" class="cta-btn cta-reserve">예약하기</a>
   </nav>
 
   <script src="script.js"></script>
