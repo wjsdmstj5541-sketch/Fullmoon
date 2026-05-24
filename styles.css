@@ -466,6 +466,8 @@ img {
 .branches {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 40px;
   padding: 130px 38px;
 }
@@ -482,6 +484,7 @@ img {
 .branch-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
 }
 
