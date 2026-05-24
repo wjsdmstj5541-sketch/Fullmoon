@@ -414,8 +414,10 @@ img {
 
 .badge-popular {
   color: #60A5FA;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
+  margin-left: 6px;
+  vertical-align: middle;
 }
 
 .pricing-info h3 {
