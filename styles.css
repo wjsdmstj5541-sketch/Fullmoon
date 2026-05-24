@@ -534,9 +534,11 @@ img {
 }
 
 .footer-social {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-weight: 500;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  text-decoration: none;
   opacity: 0.8;
   transition: all 0.3s ease;
 }
@@ -544,6 +546,11 @@ img {
 .footer-social:hover {
   opacity: 1;
   color: var(--moon);
+}
+
+.icon-instagram {
+  width: 16px;
+  height: 16px;
 }
 
 .footer p {
