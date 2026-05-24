@@ -36,11 +36,15 @@
     <section class="hero">
       <img src="hero.jpg" alt="풀문 스튜디오 대표 사진" class="hero-bg">
       <div class="hero-overlay"></div>
-      <div class="hero-ghost" aria-hidden="true">
-        <span>FULLMOON</span>
-        <span>STUDIO</span>
+      <div class="hero-content fade-in">
+        <span class="hero-badge">FULLMOON STUDIO</span>
+        <h1 class="hero-title">당신의 빛을 담습니다</h1>
+        <p class="hero-subtitle">Profile · ID Photo · Family Portrait</p>
+        <div class="hero-buttons">
+          <a href="#branches" class="btn-outline">예약하기</a>
+          <a href="#portfolio" class="btn-outline">포트폴리오 보기</a>
+        </div>
       </div>
-      <p class="hero-note">Profile · ID photo · Family portrait</p>
     </section>
 
     <section id="portfolio" class="portfolio-section">
@@ -68,41 +72,48 @@
 
       <div class="pricing-editorial-grid">
         <div class="pricing-card fade-in">
-          <div class="pricing-visual">
-            <img src="https://images.unsplash.com/photo-1544717302-de2939b7ef71?auto=format&fit=crop&w=800&q=80" alt="증명사진">
-            <div class="pricing-overlay"></div>
-          </div>
-          <div class="pricing-info">
-            <h3>증명/여권/민증</h3>
-            <p class="pricing-desc">촬영 → 셀렉 → 보정 → 출력<br>모든 과정은 약 15분 내외로 진행됩니다.</p>
+
+          <div class="pricing-info new-layout">
+            <div class="pricing-header">
+              <h3>증명·여권</h3>
+            </div>
+            <div class="pricing-price">
+              <strong>15,000</strong><span>원부터</span>
+            </div>
+            <p class="pricing-desc">촬영 · 셀렉 · 보정 · 출력<br>약 15분 소요</p>
             <div class="pricing-footer">
-              <a href="#branches" class="price-btn">예약하기</a>
+              <a href="#branches" class="btn-outline w-full">예약하기</a>
             </div>
           </div>
         </div>
         <div class="pricing-card fade-in" style="transition-delay: 100ms;">
-          <div class="pricing-visual">
-            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" alt="프로필사진">
-            <div class="pricing-overlay"></div>
-          </div>
-          <div class="pricing-info">
-            <h3>프로필사진</h3>
-            <p class="pricing-desc">가장 나다운 순간, 감각적인 빛으로 기록하는 화보형 프로필. 과한 연출보다 인상에 집중합니다.</p>
+
+          <div class="pricing-info new-layout">
+            <div class="pricing-header">
+              <span class="badge-popular">★ 인기</span>
+              <h3>프로필사진</h3>
+            </div>
+            <div class="pricing-price">
+              <strong>80,000</strong><span>원부터</span>
+            </div>
+            <p class="pricing-desc">화보형 · 의상 1벌<br>보정 3컷 포함</p>
             <div class="pricing-footer">
-              <a href="#branches" class="price-btn">예약하기</a>
+              <a href="#branches" class="btn-outline w-full">예약하기</a>
             </div>
           </div>
         </div>
         <div class="pricing-card fade-in" style="transition-delay: 200ms;">
-          <div class="pricing-visual">
-            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=800&q=80" alt="가족사진">
-            <div class="pricing-overlay"></div>
-          </div>
-          <div class="pricing-info">
-            <h3>가족사진</h3>
-            <p class="pricing-desc">함께하기에 더 소중한 오늘, 가족의 온기를 프레임에 담습니다. 자연스러운 장면을 남깁니다.</p>
+
+          <div class="pricing-info new-layout">
+            <div class="pricing-header">
+              <h3>가족사진</h3>
+            </div>
+            <div class="pricing-price">
+              <strong>120,000</strong><span>원부터</span>
+            </div>
+            <p class="pricing-desc">자연스러운 연출<br>보정 5컷 포함</p>
             <div class="pricing-footer">
-              <a href="#branches" class="price-btn">예약하기</a>
+              <a href="#branches" class="btn-outline w-full">예약하기</a>
             </div>
           </div>
         </div>
@@ -141,10 +152,18 @@
     </div>
   </footer>
 
-  <nav class="floating-cta">
+  <nav class="floating-cta desktop-only">
     <a href="tel:010-2513-5927" class="cta-btn cta-call">전화문의</a>
     <a href="#branches" class="cta-btn cta-reserve">예약하기</a>
   </nav>
+
+  <div class="mobile-cta-bar mobile-only">
+    <div class="mobile-cta-text">
+      <strong>오늘 예약 가능</strong>
+      <span>강남 · 가든파이브 · 잠실</span>
+    </div>
+    <a href="#branches" class="btn-outline btn-small">예약하기</a>
+  </div>
 
   <script src="script.js"></script>
 </body>
