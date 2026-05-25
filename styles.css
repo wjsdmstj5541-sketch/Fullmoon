@@ -643,6 +643,25 @@ img {
   font-size: 13px;
 }
 
+.subway-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  margin-right: 4px;
+  font-style: normal;
+  vertical-align: text-top;
+}
+.subway-icon.line-9 { background-color: #CAA066; }
+.subway-icon.line-8 { background-color: #E6186C; }
+.subway-icon.line-2 { background-color: #00A84D; }
+.subway-icon.line-shin { background-color: #D4003B; font-size: 9px; width: auto; padding: 0 5px; border-radius: 9px; letter-spacing: -0.5px; }
+
 .hours-row {
   display: flex;
   gap: 16px;
