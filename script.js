@@ -55,3 +55,38 @@ locTabs.forEach(tab => {
     }
   });
 });
+
+// Portfolio Lightbox
+const portfolioItems = document.querySelectorAll('.portfolio-item img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxClose = document.getElementById('lightbox-close');
+
+if (lightbox) {
+  portfolioItems.forEach(img => {
+    img.parentElement.style.cursor = 'zoom-in';
+    img.parentElement.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  const closeLightbox = () => {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target.classList.contains('lightbox-content')) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+}
