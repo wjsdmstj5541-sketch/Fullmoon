@@ -468,6 +468,8 @@ img {
   padding: 100px 38px 0;
   display: flex;
   flex-direction: column;
+  background: var(--ink);
+  color: var(--white);
 }
 
 .loc-header {
