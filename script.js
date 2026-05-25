@@ -33,3 +33,25 @@ const fadeObserver = new IntersectionObserver((entries) => {
 fadeElements.forEach((el) => {
   fadeObserver.observe(el);
 });
+
+// Location Tabs
+const locTabs = document.querySelectorAll('.loc-tab');
+const locContents = document.querySelectorAll('.loc-content');
+
+locTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    // Remove active class from all tabs and contents
+    locTabs.forEach(t => t.classList.remove('active'));
+    locContents.forEach(c => c.classList.remove('active'));
+
+    // Add active class to clicked tab
+    tab.classList.add('active');
+
+    // Show corresponding content
+    const targetId = tab.getAttribute('data-target');
+    const targetContent = document.getElementById(targetId);
+    if (targetContent) {
+      targetContent.classList.add('active');
+    }
+  });
+});

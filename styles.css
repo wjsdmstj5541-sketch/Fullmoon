@@ -529,11 +529,13 @@ img {
 }
 
 .loc-tab {
+  background: none;
+  border: none;
+  cursor: pointer;
   padding: 16px 0;
   font-size: 15px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.5);
-  text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -553,10 +555,20 @@ img {
 }
 
 .loc-content {
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1.2fr;
   gap: 60px;
   margin-bottom: 32px;
+}
+
+.loc-content.active {
+  display: grid;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .loc-details {
