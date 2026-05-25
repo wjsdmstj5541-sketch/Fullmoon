@@ -57,15 +57,15 @@ locTabs.forEach(tab => {
 });
 
 // Portfolio Lightbox
-const portfolioItems = document.querySelectorAll('.portfolio-item img');
+const portfolioItems = document.querySelectorAll('.portfolio-grid img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxClose = document.getElementById('lightbox-close');
 
 if (lightbox) {
   portfolioItems.forEach(img => {
-    img.parentElement.style.cursor = 'zoom-in';
-    img.parentElement.addEventListener('click', () => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', () => {
       lightboxImg.src = img.src;
       lightbox.classList.add('active');
       document.body.style.overflow = 'hidden';
