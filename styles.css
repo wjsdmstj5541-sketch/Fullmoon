@@ -929,8 +929,21 @@ img {
 }
 
 .footer-brand {
-  font-size: 16px;
-  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
+  margin-bottom: 8px;
+}
+
+.footer-brand .site-logo-icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 4px;
 }
 
 .footer-detail {
