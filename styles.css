@@ -376,6 +376,12 @@ img {
   text-underline-offset: 6px;
 }
 
+.packages-wrapper {
+  background: var(--ink);
+  color: var(--white);
+  padding-bottom: 80px;
+}
+
 .pricing-editorial-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
