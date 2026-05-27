@@ -494,7 +494,10 @@ img {
   flex-shrink: 0;
   width: 20px;
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pricing-footer {
