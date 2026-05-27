@@ -79,17 +79,16 @@ img {
   line-height: 1;
   letter-spacing: -0.02em;
   text-transform: lowercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.logo::after {
-  position: absolute;
-  right: -12px;
-  top: 2px;
-  width: 8px;
-  height: 8px;
-  background: var(--moon);
-  border-radius: 50%;
-  content: "";
+.site-logo-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--moon);
+  flex-shrink: 0;
 }
 
 .desktop-nav {
