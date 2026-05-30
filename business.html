@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business — fullmoon studio</title>
+  <meta name="description" content="풀문 스튜디오 B2B 비즈니스 촬영 (임원 프로필, 단체 촬영, 행사 촬영)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+  <style>
+    .business-page {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .business-hero {
+      position: relative;
+      display: grid;
+      align-items: center;
+      min-height: 80vh;
+      padding: 120px 20px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .business-hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+      opacity: 0.6;
+    }
+
+    .business-hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(23, 25, 29, 0.3) 0%, var(--ink) 100%);
+      z-index: -1;
+    }
+
+    .business-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .business-hero-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, var(--white) 0%, var(--moon) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .business-hero-desc {
+      font-size: clamp(16px, 2vw, 20px);
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+      margin-bottom: 40px;
+      word-break: keep-all;
+    }
+
+    .services-section {
+      padding: 80px 20px 120px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-title h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .section-title p {
+      color: var(--moon);
+      font-size: 16px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+    .service-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: 40px 32px;
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .service-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: rgba(202, 160, 102, 0.1);
+      color: var(--moon);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+
+    .service-card h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--white);
+    }
+
+    .service-card p {
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.6;
+      font-size: 15px;
+      margin-bottom: 24px;
+    }
+
+    .service-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .service-features li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .service-features i {
+      color: var(--moon);
+    }
+
+    .process-section {
+      background: var(--ink);
+      padding: 80px 20px 120px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 32px;
+      position: relative;
+    }
+
+    .process-number {
+      font-family: 'Outfit', sans-serif;
+      font-size: 48px;
+      font-weight: 900;
+      color: rgba(202, 160, 102, 0.2);
+      margin-bottom: 16px;
+      line-height: 1;
+    }
+
+    .process-step h4 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .process-step p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .contact-cta {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, rgba(202, 160, 102, 0.1) 0%, rgba(23, 25, 29, 0) 100%);
+      border-top: 1px solid rgba(202, 160, 102, 0.2);
+    }
+
+    .contact-cta h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+
+    .contact-cta p {
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 40px;
+      font-size: 16px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body class="business-page">
+  <header class="site-header">
+    <div class="header-glass">
+      <a class="logo" href="index.html" aria-label="fullmoon studio 홈">
+        <img class="site-logo-icon" src="logo.png" alt="Fullmoon Logo">
+        fullmoon
+      </a>
+      <nav class="desktop-nav">
+        <a href="index.html#portfolio">포트폴리오</a>
+        <a href="index.html#packages">패키지 안내</a>
+        <a href="index.html#branches">지점안내</a>
+        <a href="faq.html">FAQ</a>
+        <a href="business.html" style="color: var(--moon);">비즈니스</a>
+      </nav>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-button>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="mobile-menu" id="site-menu" data-menu>
+      <a href="index.html#portfolio">포트폴리오</a>
+      <a href="index.html#packages">패키지 안내</a>
+      <a href="index.html#branches">지점안내</a>
+      <a href="faq.html">FAQ</a>
+      <a href="business.html">비즈니스</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="business-hero">
+      <img src="portfolio5.jpg" alt="Business Photography" class="business-hero-bg">
+      <div class="business-hero-overlay"></div>
+      <div class="business-hero-content fade-in">
+        <h1 class="business-hero-title">FULLMOON<br>FOR BUSINESS</h1>
+        <p class="business-hero-desc">전문성과 신뢰를 담은 기업 맞춤형 촬영 솔루션.<br>가장 돋보여야 할 비즈니스의 순간을 완벽하게 디렉팅합니다.</p>
+        <a href="#contact" class="btn-gold">기업 촬영 문의하기</a>
+      </div>
+    </section>
+
+    <section class="services-section fade-in">
+      <div class="section-title">
+        <p>B2B Services</p>
+        <h2>비즈니스 촬영 서비스</h2>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="ti ti-tie"></i></div>
+          <h3>임원/사원 프로필</h3>
+          <p>기업의 신뢰도를 높여주는 정갈하고 프로페셔널한 인물 프로필 사진입니다. 사원증, 연혁표, 홈페이지 소개용으로 최적화된 결과물을 제공합니다.</p>
+          <ul class="service-features">
+            <li><i class="ti ti-check"></i> 1:1 맞춤형 정밀 보정</li>
+            <li><i class="ti ti-check"></i> 헤어/메이크업 제휴 가능</li>
+            <li><i class="ti ti-check"></i> 통일감 있는 배경 및 조명 세팅</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="ti ti-users"></i></div>
+          <h3>단체 및 팀 촬영</h3>
+          <p>부서별, 프로젝트 팀별 단체 사진 및 자연스러운 회의 스케치 컷 등 기업의 문화를 잘 보여줄 수 있는 이미지를 연출합니다.</p>
+          <ul class="service-features">
+            <li><i class="ti ti-check"></i> 스튜디오 및 출장 촬영 가능</li>
+            <li><i class="ti ti-check"></i> 기업 브랜딩에 맞춘 무드 기획</li>
+            <li><i class="ti ti-check"></i> 대규모 인원 수용 가능</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="ti ti-building"></i></div>
+          <h3>기업 행사 및 스케치</h3>
+          <p>중요한 사내 세미나, 컨퍼런스, 시상식 등의 현장을 생생하게 기록합니다. 홍보물 및 보도자료 배포용으로 바로 사용 가능한 고품질 사진을 전달합니다.</p>
+          <ul class="service-features">
+            <li><i class="ti ti-check"></i> 행사 식순에 따른 포인트 촬영</li>
+            <li><i class="ti ti-check"></i> 신속한 원본 및 셀렉본 제공</li>
+            <li><i class="ti ti-check"></i> 공간과 인물이 조화된 구도</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section fade-in">
+      <div class="section-title">
+        <p>Workflow</p>
+        <h2>진행 절차</h2>
+      </div>
+      
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-number">01</div>
+          <h4>문의 및 상담</h4>
+          <p>촬영 목적, 인원, 희망 일정, 레퍼런스 등을 바탕으로 1:1 맞춤 상담을 진행합니다.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-number">02</div>
+          <h4>기획 및 견적안내</h4>
+          <p>최상의 결과물을 위한 촬영 콘셉트 기획안과 세부 견적서를 전달해 드립니다.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-number">03</div>
+          <h4>본 촬영 진행</h4>
+          <p>스튜디오 방문 또는 전문 장비 지참 후 기업 출장 방문을 통해 촬영을 진행합니다.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-number">04</div>
+          <h4>보정 및 최종 납품</h4>
+          <p>선택된 베스트 컷을 세밀하게 보정하여 기한 내에 고해상도 파일로 납품합니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-cta fade-in">
+      <h2>비즈니스 촬영 상담이 필요하신가요?</h2>
+      <p>풀문 스튜디오 기업 전담팀이 친절하고 상세하게 안내해 드리겠습니다.</p>
+      <div class="contact-buttons">
+        <a href="mailto:fullmoonstudio3@gmail.com" class="btn-gold"><i class="ti ti-mail" style="margin-right: 8px;"></i> 이메일 문의</a>
+        <a href="tel:010-2513-5927" class="btn-outline-dark"><i class="ti ti-phone" style="margin-right: 8px;"></i> 전화 상담</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-info">
+        <div class="footer-brand">
+          <img class="site-logo-icon" src="logo.png" alt="Fullmoon Logo" style="display: none;"> <!-- Hidden explicitly or let css handle if it was removed -->
+          fullmoon studio
+        </div>
+        <p class="footer-detail">대표 신동호 · 사업자등록번호 239-08-02655</p>
+        <p class="footer-detail">주소 | 서울 송파구 백제고분로 45길 34, 501호</p>
+      </div>
+      <div class="footer-contact">
+        <p>fullmoonstudio3@gmail.com</p>
+        <a href="https://www.instagram.com/fullmoonstudio_jamsil/" target="_blank" rel="noopener noreferrer" class="footer-social">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-instagram">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          Instagram
+        </a>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      © 2026 Fullmoon Studio. All Rights Reserved.<br>
+      Site design & development by Jeon Eunseo
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
