@@ -48,6 +48,13 @@
       z-index: -1;
     }
 
+    .business-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 20vh auto 0; /* 모바일에서 텍스트를 아래로 20vh 만큼 내림 */
+    }
+
     @media (min-width: 900px) {
       .business-hero {
         text-align: left;
@@ -62,19 +69,12 @@
         mask-image: linear-gradient(to right, transparent 0%, black 30%);
       }
       .business-hero-overlay {
-        display: none; /* 텍스트는 좌측 빈 공간에 위치하므로 오버레이 불필요 */
+        display: none;
       }
       .business-hero-content {
-        margin: 0;
+        margin: 0; /* 데스크탑에서는 상단 여백 제거 */
         max-width: 500px;
       }
-    }
-
-    .business-hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      margin: 0 auto;
     }
 
     .business-hero-title {
