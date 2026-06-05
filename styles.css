@@ -404,7 +404,7 @@ img {
   transform: translateY(-8px);
 }
 
-.intro-row a {
+.intro-row a:not(.more-link) {
   margin-bottom: 8px;
   font-size: clamp(24px, 3.6vw, 50px);
   font-weight: 900;
