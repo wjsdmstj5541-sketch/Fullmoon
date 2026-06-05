@@ -356,13 +356,13 @@ img {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ink);
+  color: var(--muted);
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding: 7px 16px;
-  margin-bottom: 10px;
-  border: 1.5px solid var(--line);
+  gap: 4px;
+  padding: 4px 10px;
+  margin-bottom: 14px;
+  border: 1px solid var(--line);
   border-radius: 100px;
   background: transparent;
   transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -376,7 +376,7 @@ img {
 }
 
 .more-link i {
-  font-size: 13px;
+  font-size: 11px;
   transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
