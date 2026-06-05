@@ -352,28 +352,36 @@ img {
 
 .more-link {
   font-family: 'Outfit', sans-serif;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
-  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding-bottom: 12px;
-  transition: color 0.3s ease, gap 0.3s ease;
+  gap: 8px;
+  padding: 10px 22px;
+  margin-bottom: 10px;
+  border: 1.5px solid var(--line);
+  border-radius: 100px;
+  background: transparent;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .more-link:hover {
-  color: var(--ink);
-  gap: 10px;
+  color: var(--white);
+  background: var(--ink);
+  border-color: var(--ink);
+  gap: 12px;
 }
 
 .more-link i {
-  font-size: 18px;
-  transition: transform 0.3s ease;
+  font-size: 16px;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .more-link:hover i {
-  transform: translateX(2px);
+  transform: translateX(3px);
 }
 
 .portfolio-grid {
