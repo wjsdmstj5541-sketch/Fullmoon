@@ -350,6 +350,32 @@ img {
   scroll-margin-top: 100px;
 }
 
+.more-link {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 12px;
+  transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.more-link:hover {
+  color: var(--ink);
+  gap: 10px;
+}
+
+.more-link i {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.more-link:hover i {
+  transform: translateX(2px);
+}
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

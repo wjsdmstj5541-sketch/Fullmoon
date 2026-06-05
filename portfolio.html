@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — fullmoon studio</title>
+  <meta name="description" content="풀문 스튜디오 포트폴리오 갤러리 — 프로필, 증명사진, 가족사진">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;800;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .portfolio-page-hero {
+      padding: 140px 38px 60px;
+      text-align: center;
+    }
+
+    .portfolio-page-hero .kicker {
+      margin-bottom: 8px;
+    }
+
+    .portfolio-page-hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(44px, 9vw, 120px);
+      font-weight: 950;
+      line-height: 0.9;
+      margin: 0;
+    }
+
+    .portfolio-page-hero p {
+      color: var(--muted);
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    .portfolio-full-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 0 38px 100px;
+    }
+
+    .portfolio-full-grid img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      cursor: pointer;
+    }
+
+    .portfolio-full-grid img:hover {
+      transform: translateY(-8px);
+    }
+
+    @media (max-width: 900px) {
+      .portfolio-full-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 0 20px 80px;
+      }
+
+      .portfolio-page-hero {
+        padding: 120px 20px 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .portfolio-full-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 0 16px 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-glass">
+      <a class="logo" href="index.html" aria-label="fullmoon studio 홈">
+        <img class="site-logo-icon" src="logo.png" alt="Fullmoon Logo">
+        fullmoon
+      </a>
+      <nav class="desktop-nav">
+        <a href="index.html#portfolio">포트폴리오</a>
+        <a href="index.html#packages">패키지 안내</a>
+        <a href="index.html#branches">지점안내</a>
+        <a href="business.html">비즈니스</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-button>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="mobile-menu" id="site-menu" data-menu>
+      <a href="index.html#portfolio">포트폴리오</a>
+      <a href="index.html#packages">패키지 안내</a>
+      <a href="index.html#branches">지점안내</a>
+      <a href="business.html">비즈니스</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="portfolio-page-hero fade-in">
+      <p class="kicker">Work</p>
+      <h1>PORTFOLIO</h1>
+      <p>풀문 스튜디오의 다양한 촬영 결과물을 확인해 보세요.</p>
+    </section>
+
+    <div class="portfolio-full-grid fade-in">
+      <!-- 메인 페이지와 동일한 사진들 -->
+      <img src="8644.jpg" alt="포트폴리오">
+      <img src="IMG_7878.JPG" alt="포트폴리오">
+      <img src="IMG_7879.JPG" alt="포트폴리오">
+      <img src="8171.jpg" alt="포트폴리오">
+      <img src="8408.jpg" alt="포트폴리오">
+      <img src="8346.jpg" alt="포트폴리오">
+      <img src="8404.jpg" alt="포트폴리오">
+      <img src="2612.jpg" alt="포트폴리오">
+      <!-- 여기에 추가 사진을 넣어주세요 -->
+      <!-- <img src="파일명.jpg" alt="포트폴리오"> -->
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-info">
+        <strong class="footer-brand">fullmoon studio</strong>
+        <p class="footer-detail">상호 | 풀문스튜디오</p>
+        <p class="footer-detail">대표 | 정은서</p>
+        <p class="footer-detail">사업자등록번호 | 459-24-01812</p>
+        <p class="footer-detail">주소 | 서울 송파구 백제고분로 45길 34, 501호</p>
+      </div>
+      <div class="footer-contact">
+        <p>fullmoonstudio3@gmail.com</p>
+        <a href="https://www.instagram.com/fullmoonstudio_jamsil/" target="_blank" rel="noopener noreferrer" class="footer-social">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-instagram">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          Instagram
+        </a>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      © 2026 Fullmoon Studio. All Rights Reserved.<br>
+      Site design & development by Jeon Eunseo
+    </div>
+  </footer>
+
+  <!-- Portfolio Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+    <div class="lightbox-content">
+      <img src="" alt="Portfolio Full View" id="lightbox-img">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
