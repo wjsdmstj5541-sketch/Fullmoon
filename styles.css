@@ -1086,7 +1086,7 @@ img {
     font-size: 54px;
   }
 
-  .intro-row a {
+  .intro-row a:not(.more-link) {
     font-size: 25px;
   }
 
