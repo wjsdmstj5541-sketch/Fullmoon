@@ -418,7 +418,7 @@ img {
 
 .pricing-editorial-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   padding: 40px 38px 0;
   align-items: stretch;
