@@ -1361,6 +1361,38 @@ img {
   max-width: 600px;
 }
 
+/* Light Theme FAQ (for use on white background pages like Packages) */
+.faq-list.light .faq-item {
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.faq-list.light .faq-question span {
+  color: var(--ink);
+}
+
+.faq-list.light .faq-icon::before,
+.faq-list.light .faq-icon::after {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.faq-list.light .faq-item.active .faq-icon::before {
+  background: var(--moon-deep);
+}
+
+.faq-list.light .faq-question:hover span {
+  color: var(--moon-deep);
+}
+
+.faq-list.light .faq-question:hover .faq-icon::before,
+.faq-list.light .faq-question:hover .faq-icon::after {
+  background: var(--moon-deep);
+}
+
+.faq-list.light .faq-answer p {
+  color: var(--muted);
+}
+
+
 .faq-back {
   max-width: 720px;
   margin: 48px auto 0;
